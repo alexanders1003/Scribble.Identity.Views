@@ -1,4 +1,7 @@
 
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+
 *, *:before, *:after {
     padding: 0;
     margin: 0;
@@ -22,8 +25,20 @@
         min-height: 760px;
     }
 
-    .layout-content {
+    .layout-content-narrow {
         width: 470px;
+    }
+
+    .layout-content-wide {
+        width: 770px;
+    }
+
+    .form-group {
+        flex-direction: row;
+    }
+
+    .shadow-box-right {
+        display: flex;
     }
 
     .shadow-box__footer {
@@ -37,9 +52,21 @@
     html {
         min-height: 760px;
     }
-    
-    .layout-content {
+
+    .layout-content-narrow {
         width: 470px;
+    }
+
+    .layout-content-wide {
+        width: 700px;
+    }
+
+    .form-group {
+        flex-direction: row;
+    }
+    
+    .shadow-box-right {
+        display: flex;
     }
 
     .shadow-box__footer {
@@ -51,11 +78,26 @@
 @media (max-width: 720px) {
 
     html {
-        min-height: 800px;
+        min-height: 850px;
     }
 
-    .layout-content {
-        width: 85%;
+    .layout-content-narrow {
+        max-width: 470px;
+        width: 95%;
+    }
+
+    .layout-content-wide {
+        max-width: 700px;
+        width: 95%;
+    }
+
+    .form-group {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .shadow-box-right {
+        display: none;
     }
 
     .shadow-box__footer {
@@ -68,6 +110,7 @@
 html {
     height: 100%;
     background-color: #F8F8F8;
+    overflow-x: hidden;
 }
 
 html * {
@@ -148,7 +191,7 @@ body {
         #99FF00,
         #11BB00
     );
-    left: -550px;
+    left: -450px;
     bottom: 350px;
 }
 
@@ -165,14 +208,40 @@ body {
 
 .shadow-box {
     display: flex;
-    flex-direction: column;
     width: 100%;
     position: sticky;
     border-radius: 20px;
     background: #FFFFFF99;
     box-shadow: 0 0 5px #555555;
-    padding: 35px;
+    padding: 30px 40px;
     z-index: 2;
+}
+
+.shadow-box-wide {
+    flex-direction: row;
+    column-gap: 25px;
+}
+
+.shadow-box-narrow {
+    flex-direction: column;
+}
+
+.shadow-box-left {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 700%;
+}
+
+.shadow-box-right {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300%;
+}
+
+.shadow-box-right img {
+    width: 90%;
 }
 
 .shadow-box form {
@@ -188,7 +257,6 @@ body {
 
 .shadow-box__title h3 {
     font-size: 25px;
-    line-height: 42px;
 }
 
 .shadow-box__title h4 {
@@ -229,44 +297,44 @@ body {
     box-shadow: -2px -2px #77EE00, inset -2px -2px #77EE00, -4px -4px #55DD00, inset -4px -4px #55DD00, -6px -6px #33CC00, inset -6px -6px #33CC00, -8px -8px #11BB00, inset -8px -8px #11BB00;
 }
 
-.form__field {
+.form-group {
+    display: flex;
+    column-gap: 15px;
+}
+
+.form-field {
     display: flex;
     row-gap: 5px;
     flex-direction: column;
     font-size: 16px;
     justify-content: space-between;
-}
-
-.form__field-label {
-    display: block;
-    font-weight: bold;
-}
-
-.form__field-input {
-    display: block;
-    height: 50px;
     width: 100%;
-    background-color: rgba(255,255,255,0.07);
+}
+
+.form-field-label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-field-input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid #555555;
     border-radius: 20px;
-    border: 1px solid #333333;
-    padding: 0 20px;
-    font-size: 15px;
-    font-weight: 300;
+    padding: 11px 20px;
+    line-height: 20px;
+    font-size: 14px;
 }
 
-.form__fields-validation-errors {
+.form-fields-validation-errors, .form-field-input-validation-errors {
+    display: none;
     color: #FF3300;
     font-weight: bold;
     text-align: center;
 }
 
-.form__field-input-validation-errors {
-    color: #FF3300;
-    font-weight: bold;
-    text-align: center;
-}
-
-.form__field-link {
+.form-field-link {
     display: flex;
     font-size: 15px;
     text-decoration: none;
@@ -317,7 +385,7 @@ body {
     background: linear-gradient(#72bd02,#0c8901);;
 }
 
-.form__field-social-label {
+.form-field-social-label {
     display: flex;
     font-weight: bold;
     justify-content: center;
@@ -326,13 +394,12 @@ body {
 .social-buttons {
   display: flex;
   width: 100%;
-  margin-top: 10px;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 
-.social-buttons__button {
+.social-buttons-button {
     display: flex;
     border:0;
     padding: 10px;
@@ -343,7 +410,7 @@ body {
     justify-content:center;
 }
 
-.social-buttons__button:hover .icon {
+.social-buttons-button:hover .icon {
     color: #11BB00;
 }
 

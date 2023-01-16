@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign up - Scribble Accounts</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="layout">
+        <div class="layout-content layout-content-wide">
+
+            <div id="shape_1" class="shape"></div>
+            <div id="shape_2" class="shape"></div>            
+            <div id="shape_3" class="shape"></div>            
+            <div id="shape_4" class="shape"></div>
+            <div id="shape_5" class="shape"></div>
+            <div id="shape_6" class="shape"></div>
+            
+            
+            <div class="shadow-box shadow-box-wide">
+
+                <div class="shadow-box-left">
+                    <form id="sign-in-form" method="post" autocomplete="off">    
+                                
+                        <div class="logo">
+                            <div class="sign">
+                            <div class="square"></div>
+                            </div>
+                            <span class="name">Scribble</span>
+                        </div>
+                        <div class="shadow-box__title">
+                            <h3>Sign up</h3>
+                            <h4>Create your Scribble account to use our services</h4>
+                        </div>
+
+                        <span class="form-fields-validation-errors"></span>
+                        
+                        <div class="form-field">
+                            <label class="form-field-label" for="username">Username</label>
+                            <input class="form-field-input" type="text" placeholder="Email or Phone" id="username">
+                            <span class="form-field-input-validation-errors"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-field">
+                                <label class="form-field-label" for="password">Password</label>
+                                <input class="form-field-input" type="password" placeholder="Enter password..." id="password">
+                                <span class="form-field-input-validation-errors"></span>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-field-label" for="confirm">Confirm</label>
+                                <input class="form-field-input" type="password" placeholder="Confirm password..." id="confirm">
+                                <span class="form-field-input-validation-errors"></span>
+                            </div>
+                        </div>
+                    
+                        <button id="submit-button" class="primary-button" type="submit">Sign up</button>
+                       
+                        <div class="form-field form-field-socials">
+                            <label class="form-field-social-label">Or use</label>
+                            <div class="social-buttons">
+                                <a href="#" class="social-buttons-button">
+                                    <i class="icon fi fi-brands-google"></i>
+                                </a>
+                                <a href="#" class="social-buttons-button">
+                                    <i class="icon fi fi-brands-vk"></i>
+                                </a>
+                                <a href="#" class="social-buttons-button">
+                                    <i class="icon fi fi-brands-microsoft"></i>
+                                </a>
+                                <a href="#" class="social-buttons-button">
+                                    <i class="icon fi fi-brands-github"></i>
+                                </a>
+                                <a href="#" class="social-buttons-button">
+                                    <i class="icon fi fi-brands-telegram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="shadow-box-right">
+                    <img src="img/user.png" alt="">
+                </div>         
+            </div>
+
+
+
+            <div class="shadow-box shadow-box-narrow shadow-box_additionals">
+                <span class="form-additional-message">
+                    Already signed up? 
+                    <a href="#" class="form-additional-message_link">Sign in</a>
+                </span>
+            </div>
+            <div class="shadow-box__footer">
+                <a href="#" class="footer-link">О сервисе</a>
+                <a href="#" class="footer-link">Обратная связь</a>
+                <a href="#" class="footer-link">Соглашение</a>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>
