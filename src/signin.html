@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-all.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
 </head>
 <body>
@@ -19,7 +20,7 @@
             <div id="shape_5" class="shape"></div>
             <div id="shape_6" class="shape"></div> 
             <div class="shadow-box">
-                <form method="post" autocomplete="off">
+                <form id="sign-in-form" method="post" autocomplete="off">
                     <div class="logo">
                         <div class="sign">
                         <div class="square"></div>
@@ -30,16 +31,19 @@
                         <h3>Sign in</h3>
                         <h4>User your Scribble account</h4>
                     </div>
+                    <span class="form__fields-validation-errors"></span>
                     <div class="form__field">
                         <label class="form__field-label" for="username">Username</label>
                         <input class="form__field-input" type="text" placeholder="Email or Phone" id="username">
+                        <span class="form__field-input-validation-errors"></span>
                     </div>
                     <div class="form__field">
                         <label class="form__field-label" for="password">Password</label>
                         <input class="form__field-input" type="password" placeholder="Password" id="password">
+                        <span class="form__field-input-validation-errors"></span>
                     </div>
                     <a class="form__field-link" href="#">Forgot password?</a>
-                    <button class="primary-button" type="submit">Sign in</button>
+                    <button id="submit-button" class="primary-button" type="submit">Sign in</button>
                     <div class="form__field form__field-socials">
                         <label class="form__field-social-label">Or use</label>
                         <div class="social-buttons">
@@ -64,7 +68,7 @@
             </div>
             <div class="shadow-box shadow-box_additionals">
                 <span class="form-additional-message">
-                    Don't have an account?
+                    Don't have an account? 
                     <a href="#" class="form-additional-message_link">Sign up</a>
                 </span>
             </div>
@@ -75,5 +79,8 @@
             </div>
         </div>
     </div>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 </html>
