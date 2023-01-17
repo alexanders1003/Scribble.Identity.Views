@@ -1,8 +1,9 @@
-
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,8 +12,8 @@
 @font-face {
     font-family: "Nunito";
     src: url("../fonts/Nunito-VariableFont_wght.ttf");
- }
-    
+}
+
 @font-face {
     font-family: "Nunito";
     src: url("../fonts/Nunito-Italic-VariableFont_wght.ttf");
@@ -35,6 +36,7 @@
 
     .form-group {
         flex-direction: row;
+        justify-content: space-between;
     }
 
     .shadow-box-right {
@@ -48,7 +50,7 @@
 }
 
 @media (max-width: 960px) and (min-width: 720px) {
-    
+
     html {
         min-height: 760px;
     }
@@ -63,8 +65,9 @@
 
     .form-group {
         flex-direction: row;
+        justify-content: space-between;
     }
-    
+
     .shadow-box-right {
         display: flex;
     }
@@ -114,7 +117,7 @@ html {
 }
 
 html * {
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: #333333;
 }
 
@@ -138,7 +141,7 @@ body {
     position: relative;
 }
 
-.layout-content .shape{
+.layout-content .shape {
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -146,62 +149,50 @@ body {
 }
 
 #shape_1 {
-    background: linear-gradient(
-        30deg,
-        #99FF00,
-        #11BB00
-    );
+    background: linear-gradient(30deg,
+            #99FF00,
+            #11BB00);
     left: -100px;
-    top: -40px; 
+    top: -40px;
 }
 
 #shape_2 {
-    background: linear-gradient(
-        60deg,
-        #99FF00,
-        #11BB00
-    );
+    background: linear-gradient(60deg,
+            #99FF00,
+            #11BB00);
     right: -300px;
     top: -40px;
 }
 
 #shape_3 {
-    background: linear-gradient(
-        90deg,
-        #99FF00,
-        #11BB00
-    );
+    background: linear-gradient(90deg,
+            #99FF00,
+            #11BB00);
     left: -300px;
     bottom: 40px;
 }
 
 #shape_4 {
-    background: linear-gradient(
-        120deg,
-        #99FF00,
-        #11BB00
-    );
+    background: linear-gradient(120deg,
+            #99FF00,
+            #11BB00);
     right: -100px;
     top: 460px;
 }
 
 #shape_5 {
-    background: linear-gradient(
-        150deg,
-        #99FF00,
-        #11BB00
-    );
+    background: linear-gradient(150deg,
+            #99FF00,
+            #11BB00);
     left: -450px;
     bottom: 350px;
 }
 
 
 #shape_6 {
-    background: linear-gradient(
-        180deg,
-        #99FF00,
-        #11BB00
-    );
+    background: linear-gradient(180deg,
+            #99FF00,
+            #11BB00);
     right: -450px;
     bottom: 220px;
 }
@@ -269,7 +260,7 @@ body {
     align-items: center;
     column-gap: 10px;
     margin: 0 auto;
-    width: 100px; 
+    width: 100px;
 }
 
 .logo .sign {
@@ -327,7 +318,8 @@ body {
     font-size: 14px;
 }
 
-.form-fields-validation-errors, .form-field-input-validation-errors {
+.form-fields-validation-errors,
+.form-field-input-validation-errors {
     display: none;
     color: #FF3300;
     font-weight: bold;
@@ -338,6 +330,69 @@ body {
     display: flex;
     font-size: 15px;
     text-decoration: none;
+}
+
+.form-field-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-field-checkbox input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.form-field-checkbox input:not(:checked)+label:hover::before {
+    border: 1px solid #333333;
+    background-color: #DDDDDD;
+}
+
+.form-field-checkbox input:not(:checked)+label:active::before {
+    border: 1px solid #111111;
+    background-color: #BBBBBB;
+}
+
+.form-field-checkbox input:checked+label::before {
+    content: "✔";
+    background-color: #55DD00;
+    color: #333333;
+    border: 1px solid transparent;
+}
+
+.form-field-checkbox input:checked+label:hover::before {
+    box-shadow: 0px 0px 10px #77EE00;
+    background-color: #77EE00;
+}
+
+.form-field-checkbox input:checked+label:active::before {
+    box-shadow: inset 0px 0px 10px #009900;
+    background-color: #33CC00;
+}
+
+.form-field-checkbox label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+}
+
+.form-field-checkbox label::before {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    margin-right: 5px;
+    width: 1em;
+    height: 1em;
+    border-radius: 5px;
+    border: 1px solid #555555;
+    transition: 300ms;
 }
 
 .shadow-box_additionals {
@@ -377,12 +432,19 @@ body {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    background: linear-gradient(#99FF00,#11BB00);
-    transition: 300ms linear;
+    background: #55DD00;
+    transition: 300ms;
 }
 
 .primary-button:hover {
-    background: linear-gradient(#72bd02,#0c8901);;
+    background: #77EE00;
+    box-shadow: 0 0 20px #77EE00;
+}
+
+.primary-button:active {
+    background: #33CC00;
+    box-shadow: inset 0 0 20px #009900;
+
 }
 
 .form-field-social-label {
@@ -392,22 +454,22 @@ body {
 }
 
 .social-buttons {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .social-buttons-button {
     display: flex;
-    border:0;
+    border: 0;
     padding: 10px;
     border-radius: 15px;
     box-sizing: border-box;
     text-decoration: none;
-    background-color: rgba(255,255,255,0);
-    justify-content:center;
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
 }
 
 .social-buttons-button:hover .icon {
