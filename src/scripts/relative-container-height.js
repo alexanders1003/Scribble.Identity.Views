@@ -21,12 +21,12 @@ function OnCssLoad() {
 function GetHeight(main, additionals, footer) {
     main.css({ minHeight: $("#shadow-box-main").height() + 60 });
 
-    if ($("#shadow-box_additionals").length)
-        additionals.css({ minHeight: $("#shadow-box_additionals").height() + 40 });
+    if ($("#shadow-box-additionals").length)
+        additionals.css({ minHeight: $("#shadow-box-additionals").height() + 40 });
     else
         additionals.css({ display: "none" });
 
-    footer.css({ minHeight: $("#shadow-box__footer").height() });
+    footer.css({ minHeight: $("#shadow-box-footer").height() });
 
     $("html").css({ minHeight: main.height() + additionals.height() + footer.height() + 60 });
     $(".circles").css({ minHeight: $("html").height() });

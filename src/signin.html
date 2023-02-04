@@ -5,25 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="scripts/relative-container-height.js"></script>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/styles.css" onload="OnCssLoad()">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
     <div class="layout">
+        <ul class="background-shapes">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
         <div class="layout-content layout-content-narrow">
             
             <div id="layout-content-container">
@@ -38,18 +36,18 @@
                             </div>
                             <div class="shadow-box-title">
                                 <h3>Sign in</h3>
-                                <h4>User your Scribble account</h4>
+                                <h4>Use your Scribble account</h4>
                             </div>
-                            <span class="form-fields-validation-errors"></span>
+                            <span class="form-field-validation-error"></span>
                             <div class="form-field">
                                 <label class="form-field-label" for="username">Username</label>
                                 <input class="form-field-input" type="text" placeholder="Email or Phone" id="username">
-                                <span class="form-field-input-validation-errors"></span>
+                                <span class="form-field-validation-error"></span>
                             </div>
                             <div class="form-field">
                                 <label class="form-field-label" for="password">Password</label>
                                 <input class="form-field-input" type="password" placeholder="Enter password..." id="password">
-                                <span class="form-field-input-validation-errors"></span>
+                                <span class="form-field-validation-error"></span>
                             </div>
                             <div class="form-group">
                                 <div class="form-field-checkbox">
@@ -59,22 +57,22 @@
                                 <a class="form-field-link" href="forgotpassword.html">Forgot password?</a>
                             </div>
                             <button id="submit-button" class="primary-button" type="submit">Sign in</button>
-                            <div class="form-field form-field-socials">
+                            <div class="form-field">
                                 <label class="form-field-social-label">Or use</label>
-                                <div class="social-buttons">
-                                    <a href="#" class="social-buttons-button">
+                                <div class="form-field-social-buttons">
+                                    <a href="#" class="form-field-social-button">
                                         <i class="icon fi fi-brands-google"></i>
                                     </a>
-                                    <a href="#" class="social-buttons-button">
+                                    <a href="#" class="form-field-social-button">
                                         <i class="icon fi fi-brands-vk"></i>
                                     </a>
-                                    <a href="#" class="social-buttons-button">
+                                    <a href="#" class="form-field-social-button">
                                         <i class="icon fi fi-brands-microsoft"></i>
                                     </a>
-                                    <a href="#" class="social-buttons-button">
+                                    <a href="#" class="form-field-social-button">
                                         <i class="icon fi fi-brands-github"></i>
                                     </a>
-                                    <a href="#" class="social-buttons-button">
+                                    <a href="#" class="form-field-social-button">
                                         <i class="icon fi fi-brands-telegram"></i>
                                     </a>
                                 </div>
@@ -84,20 +82,20 @@
                 </div>
             </div>
 
-            <div id="layout-content-container-additionals">
-                <div class="shadow-box shadow-box-narrow" id="shadow-box_additionals">
+            <div id="layout-content-container-additional">
+                <div class="shadow-box shadow-box-narrow" id="shadow-box-additional">
                     <span class="form-additional-message">
                         Don't have an account? 
-                        <a href="signup.html" class="form-additional-message_link">Sign up</a>
+                        <a href="signup.html" class="form-additional-link">Sign up</a>
                     </span>
                 </div>
             </div>
 
             <div id="layout-content-container-footer">
-                <div id="shadow-box__footer">
-                    <a href="#" class="footer-link">About</a>
-                    <a href="#" class="footer-link">Feedback</a>
-                    <a href="#" class="footer-link">User agreement</a>
+                <div id="shadow-box-footer">
+                    <a href="#" class="shadow-box-footer-link">About</a>
+                    <a href="#" class="shadow-box-footer-link">Feedback</a>
+                    <a href="#" class="shadow-box-footer-link">User agreement</a>
                 </div>
             </div>
 
